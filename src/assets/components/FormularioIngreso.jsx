@@ -27,20 +27,16 @@ const FormularioIngreso = ({ setListaColaboradores, listaColaboradores }) => {
   return (
     <Form onSubmit={handleSubmit} className="alert alert-secondary p-3 m-3">
       <Form.Group className="d-flex flex-column">
-        <label htmlFor="" className="h6">
-          Nombre del colaborador
-        </label>
+        <label htmlFor="">Nombre del colaborador</label>
         <input
           type="text"
           name="nombreColaborador"
           onChange={(e) => setNombreColaborador(e.target.value)}
-          className="m-2 p-1 h6"
-          placeholder="Nuevo asistente"
+          className="m-2 p-1"
+          placeholder="Nuevo colaborador"
           value={nombreColaborador}
         />
-        <label htmlFor="" className="h6">
-          Correo del colaborador
-        </label>
+        <label htmlFor="">Correo del colaborador</label>
         <input
           type="email"
           name="correoColaborador"
@@ -49,7 +45,7 @@ const FormularioIngreso = ({ setListaColaboradores, listaColaboradores }) => {
           placeholder="Correo electrónico"
           value={correoColaborador}
         />
-        <Button className="btn btn-sm btn-primary ms-auto" type="submit">
+        <Button className="btn btn-sm btn-primary me-auto" type="submit">
           Agregar
         </Button>
       </Form.Group>

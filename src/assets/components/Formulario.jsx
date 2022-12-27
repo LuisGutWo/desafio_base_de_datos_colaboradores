@@ -61,7 +61,7 @@ const Formulario = () => {
       {/* Lista */}
 
       <div>
-        <h2 className="alert alert-primary text-center h5 mt-3">
+        <h2 className="alert alert-primary h5">
           Listado de colaboradores
         </h2>
       </div>
