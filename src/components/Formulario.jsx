@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { nanoid } from "nanoid";
+
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-const FormularioIngreso = ({ setListaColaboradores, listaColaboradores }) => {
+
+const Formulario = ({ setListaColaboradores, listaColaboradores }) => {
+
   // Estados del formulario
   const [nombreColaborador, setNombreColaborador] = useState("");
   const [correoColaborador, setCorreoColaborador] = useState("");
@@ -23,6 +26,7 @@ const FormularioIngreso = ({ setListaColaboradores, listaColaboradores }) => {
     setNombreColaborador("");
     setCorreoColaborador("");
   };
+  
 
   return (
     <Form onSubmit={handleSubmit} className="alert alert-secondary p-3 m-3">
@@ -45,7 +49,7 @@ const FormularioIngreso = ({ setListaColaboradores, listaColaboradores }) => {
           placeholder="Correo electrónico"
           value={correoColaborador}
         />
-        <Button className="btn btn-sm btn-primary me-auto" type="submit">
+        <Button className="btn btn-sm btn-primary ms-auto me-2" type="submit">
           Agregar
         </Button>
       </Form.Group>
@@ -53,4 +57,4 @@ const FormularioIngreso = ({ setListaColaboradores, listaColaboradores }) => {
   );
 };
 
-export default FormularioIngreso;
+export default Formulario;
